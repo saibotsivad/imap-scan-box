@@ -1,0 +1,25 @@
+{
+  "name": "imap-scan-box",
+  "version": "1.0.0",
+  "description": "Scan an IMAP box and emit for each message found.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saibotsivad/imap-scan-box.git"
+  },
+  "keywords": [
+    "imap"
+  ],
+  "author": "saibotsivad",
+  "license": "VOL",
+  "bugs": {
+    "url": "https://github.com/saibotsivad/imap-scan-box/issues"
+  },
+  "homepage": "https://github.com/saibotsivad/imap-scan-box#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
