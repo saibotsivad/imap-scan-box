@@ -1,6 +1,6 @@
 {
   "name": "imap-scan-box",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scan an IMAP box and emit for each message found.",
   "main": "index.js",
   "scripts": {
