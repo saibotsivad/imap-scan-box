@@ -95,9 +95,14 @@ The following error actions exist:
 * `fetch`: Opened the box, but fetching the messages threw an error.
 * `error`: Closing the IMAP box after fetching completed threw an error.
 
-### `opened` *(opened)*
+### `opened` *(object)*
 
-Emitted after the IMAP box was opened. The emitted object
+Emitted after the IMAP box is opened. The emitted object
+is the `box` object given by the imap module.
+
+### `closed` *(object)*
+
+Emitted after the IMAP box is closed. The emitted object
 is the `box` object given by the imap module.
 
 ### `message` *(object)*
