@@ -111,6 +111,12 @@ following properties:
 The stream object is the actual streamed message object
 as given by the imap module.
 
+### `end`
+
+Emitted after all actions have completed. Either by way
+of the box scan completing, or an error occuring which
+prevents further scanning.
+
 ## license
 
 Published and released under the [VOL](http://veryopenlicense.com).
