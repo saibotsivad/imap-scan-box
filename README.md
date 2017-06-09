@@ -28,7 +28,7 @@ const fetch = {
 
 // must wait until imap is ready
 imap.once('ready', () => {
-	const scanner = scanBox(imap, boxName, options, range, fetch)
+	const scanner = scanBox(imap, boxName, range, fetch)
 	// emitted messages emit the streaming object
 	scanner.on('message', ({ stream }) => {
 		let body = ''
