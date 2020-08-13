@@ -30,22 +30,24 @@ const fetch = {
 imap.once('ready', () => {
 	const scanner = scanBox(imap, boxName, range, fetch)
 	// emitted messages emit the streaming object
-	scanner.on('message', ({ stream }) => {
+	scanner.on('message', (message) => {
 		let body = ''
 
-		message.on('body', (stream, info) => {
+		message.stream.on('body', (stream, info) => {
 			stream.on('data', chunk => body += chunk.toString('utf8'))
 		})
 
-		message.once('attributes', attributes => {
+		message.stream.once('attributes', attributes => {
 			console.log(attributes)
 		})
 
-		message.once('end', () => {
+		message.stream.once('end', () => {
 			console.log(body)
 		})
 	})
 })
+
+imap.connect()
 ```
 
 ### `imap`
